@@ -1,15 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>CNN卷积神经网络</title>
-    <url>/2023/07/02/CNN/</url>
-    <content><![CDATA[<h1>什么是CNN卷积神经网络？</h1>
-]]></content>
-      <tags>
-        <tag>人工智能</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>WEELCOME TO MY BLOG</title>
     <url>/2023/07/02/Welcome/</url>
     <content><![CDATA[<pre><code>欢迎来到Aaron Lee的博客！在这里，我会分享一些我学习过程的笔记以及分享一些关于计算机的知识，如果发现什么错误欢迎各位指出，大家共同进步！
@@ -18,5 +9,18 @@
 <p><img src="/images/Dreamy_Sea1.jpg" alt="Alt Text"><br><br>
 学无止境！</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>CNN卷积神经网络</title>
+    <url>/2023/07/02/CNN/</url>
+    <content><![CDATA[<h1>什么是CNN卷积神经网络？</h1>
+]]></content>
+      <categories>
+        <category>NLP</category>
+      </categories>
+      <tags>
+        <tag>CNN</tag>
+        <tag>机器学习</tag>
+      </tags>
   </entry>
 </search>
