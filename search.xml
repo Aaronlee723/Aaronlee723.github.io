@@ -15,7 +15,7 @@
     <url>/2023/07/02/CNN/</url>
     <content><![CDATA[<h1>什么是CNN卷积神经网络？</h1>
 <p>卷积神经网络（Convolutional Neural Networks, CNN）这个概念的提出可以追溯到二十世纪80~90年代，但是有那么一段时间这个概念被“雪藏”了，因为当时的硬件和软件技术比较落后，而随着各种深度学习理论相继被提出以及数值计算设备的高速发展，卷积神经网络得到了快速发展。那究竟什么是卷积神经网络呢？以手写数字识别为例，整个识别的过程如下所示：</p>
-<p><img src="/images/blogimages/CNNimages/i.png" alt="picture error"><pr>图1手写数字识别过程</p>
+<p><img src="/images/blogimages/CNNimages/1.png" alt="picture error"><pr>图1手写数字识别过程</p>
 ]]></content>
       <categories>
         <category>NLP</category>
