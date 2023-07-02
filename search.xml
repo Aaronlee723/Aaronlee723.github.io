@@ -1,19 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>CNN卷积神经网络</title>
-    <url>/2023/07/02/CNN/</url>
-    <content><![CDATA[<h1>什么是CNN卷积神经网络？</h1>
-]]></content>
-      <categories>
-        <category>NLP</category>
-      </categories>
-      <tags>
-        <tag>CNN</tag>
-        <tag>机器学习</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>WEELCOME TO MY BLOG</title>
     <url>/2023/07/02/Welcome/</url>
     <content><![CDATA[<pre><code>欢迎来到Aaron Lee的博客！在这里，我会分享一些我学习过程的笔记以及分享一些关于计算机的知识，如果发现什么错误欢迎各位指出，大家共同进步！
@@ -22,5 +9,20 @@
 <p><img src="/images/Dreamy_Sea1.jpg" alt="Alt Text"><br><br>
 学无止境！</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>CNN卷积神经网络</title>
+    <url>/2023/07/02/CNN/</url>
+    <content><![CDATA[<h1>什么是CNN卷积神经网络？</h1>
+<p>卷积神经网络（Convolutional Neural Networks, CNN）这个概念的提出可以追溯到二十世纪80~90年代，但是有那么一段时间这个概念被“雪藏”了，因为当时的硬件和软件技术比较落后，而随着各种深度学习理论相继被提出以及数值计算设备的高速发展，卷积神经网络得到了快速发展。那究竟什么是卷积神经网络呢？以手写数字识别为例，整个识别的过程如下所示：</p>
+<p><img src="/images/blogimages/CNNimages/i.png" alt="picture error"><pr>图1手写数字识别过程</p>
+]]></content>
+      <categories>
+        <category>NLP</category>
+      </categories>
+      <tags>
+        <tag>CNN</tag>
+        <tag>机器学习</tag>
+      </tags>
   </entry>
 </search>
