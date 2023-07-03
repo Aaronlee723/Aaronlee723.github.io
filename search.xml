@@ -1,22 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>CNN卷积神经网络</title>
-    <url>/2023/07/02/CNN/</url>
-    <content><![CDATA[<h1>什么是CNN卷积神经网络？</h1>
-<p>卷积神经网络（Convolutional Neural Networks, CNN）这个概念的提出可以追溯到二十世纪80~90年代，但是有那么一段时间这个概念被“雪藏”了，因为当时的硬件和软件技术比较落后，而随着各种深度学习理论相继被提出以及数值计算设备的高速发展，卷积神经网络得到了快速发展。那究竟什么是卷积神经网络呢？以手写数字识别为例，整个识别的过程如下所示：</p>
-<p><img src="/images/blogimages/CNNimages/1.png" alt="picture error"><pr>图1手写数字识别过程</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">int a</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>NLP</category>
-      </categories>
-      <tags>
-        <tag>CNN</tag>
-        <tag>机器学习</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>WEELCOME TO MY BLOG</title>
     <url>/2023/07/02/Welcome/</url>
     <content><![CDATA[<pre><code>欢迎来到Aaron Lee的博客！
@@ -29,6 +13,54 @@
 ]]></content>
       <tags>
         <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>菜猫喝水</title>
+    <url>/2023/07/03/test/</url>
+    <content><![CDATA[<h2 id="【TiTle】">【TiTle】</h2>
+<p>身为全电大最聪明的猫，菜猫他有 $n$ 个不同水杯，为了方便喝水，菜猫给第 $i$ 号水杯里面盛上i毫升水。</p>
+<h2 id="【Content】">【Content】</h2>
+<p>有一天，猫口渴了。他决定喝一些水来解渴。因为活得太久，喝水在猫看来也应该是一种艺术，不同的水杯里的水一起喝可口程度不同。所以他决定在他的 $n$ 个水杯中挑出可口度最大的 $k$ 个水杯来喝水。这 $k$ 个水杯的可口度是他们的盛水量的最大公约数。</p>
+<h2 id="【Standard-Input】">【Standard Input】</h2>
+<p>两个空格分开的正整数 $n$ 和 $k$。</p>
+<h2 id="【Standard-Output】">【Standard Output】</h2>
+<p>一个整数，为最大的可口度。</p>
+<p>输入样例</p>
+<blockquote>
+<p>4 2</p>
+</blockquote>
+<p>输出样例</p>
+<blockquote>
+<p>2</p>
+</blockquote>
+<h2 id="【样例解释】">【样例解释】</h2>
+<p>菜猫一共有 $4$ 个杯子，里面分别装了 $1$ mL，$2$ mL，$3$ mL 和 $4$ mL 水，现在要挑出两杯水，使得这些水的毫升数的最大公约数最大。可以挑选$2$ mL和 $4$ mL，这样最大公约数为 $2$，最为可口。但假如挑选的是 $1$ mL 和 $3$ mL，最大公约数仅为 $1$，不是很可口。所以可口度最大为 $2$.<br>
+对于 100% 的数据，$k$，$n$ $\leq$ $2\cdot 10^9$</p>
+<h2 id="【示例代码】">【示例代码】</h2>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> mo = <span class="number">1e9</span>+<span class="number">7</span>,maxn = <span class="number">12</span>;</span><br><span class="line"><span class="type">int</span> n,col[<span class="number">3</span>],cha[<span class="number">3</span>] = &#123;<span class="number">0</span>&#125;,id = <span class="number">0</span>,has[<span class="number">99</span>][<span class="number">99</span>],m,cnt = <span class="number">0</span>,tot1[<span class="number">999</span>],tot2[<span class="number">999</span>];</span><br><span class="line"><span class="type">char</span> a[maxn + <span class="number">1</span>],b[maxn + <span class="number">1</span>],t;</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">node</span>&#123;</span><br><span class="line">    <span class="type">long</span> <span class="type">long</span> v[<span class="number">80</span>][<span class="number">80</span>];</span><br><span class="line">&#125;nil,ans,f;</span><br><span class="line">node <span class="keyword">operator</span> * (node a,node b)&#123;</span><br><span class="line">    node c = nil;</span><br><span class="line">    <span class="type">long</span> <span class="type">long</span> t ;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span> ; i &lt;= id; ++i)</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span> ; j &lt;= id ; ++j)&#123;</span><br><span class="line">            t = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> k = <span class="number">0</span> ; k &lt;= id ; ++k) t = (t + a.v[i][k] * b.v[k][j]) % mo;</span><br><span class="line">            c.v[i][j] = t;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">return</span> c;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%s%s&quot;</span>,a,b);  n = <span class="built_in">strlen</span>(a);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span> ; i &lt; <span class="number">3</span> ; ++i) <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;col[i]);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;m);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span> ; i &lt; n ; ++i)&#123;</span><br><span class="line">        cha[(b[i] - a[i] + <span class="number">3</span>) % <span class="number">3</span>] ++;</span><br><span class="line">        t = a[i];</span><br><span class="line">        <span class="keyword">while</span> (t != b[i])&#123;</span><br><span class="line">            ++cnt; m -= col[t - <span class="string">&#x27;a&#x27;</span>];</span><br><span class="line">            ++t;</span><br><span class="line">            <span class="keyword">if</span> (t &gt; <span class="string">&#x27;c&#x27;</span>) t -= <span class="number">3</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (m &lt; <span class="number">0</span>)&#123;<span class="built_in">puts</span>(<span class="string">&quot;0&quot;</span>); <span class="keyword">return</span> <span class="number">0</span>;&#125;</span><br><span class="line">    m = m / (col[<span class="number">0</span>] + col[<span class="number">1</span>] + col[<span class="number">2</span>]) * <span class="number">3</span> + cnt;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span> ; i &lt;= n ; ++i)</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span> ; i + j &lt;= n ; ++j)&#123;</span><br><span class="line">            has[i][j] = ++id;</span><br><span class="line">            tot1[id] = i;</span><br><span class="line">            tot2[id] = j;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="built_in">memset</span>(nil.v,<span class="number">0</span>,<span class="built_in">sizeof</span>(nil.v));</span><br><span class="line">    ans = f = nil;</span><br><span class="line">    ans.v[ has[cha[<span class="number">1</span>]][cha[<span class="number">2</span>]] ][<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">    <span class="type">int</span> x,y;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span> ; i &lt;= id ; ++i)&#123;</span><br><span class="line">        x = tot1[i]; y = tot2[i];</span><br><span class="line">        <span class="keyword">if</span> (n - x - y) f.v[i][has[x + <span class="number">1</span>][y]] = x + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span> (x) f.v[i][has[x - <span class="number">1</span>][y + <span class="number">1</span>]] = y + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span> (y) f.v[i][has[x][y - <span class="number">1</span>]] = n - x - y + <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    f.v[<span class="number">0</span>][<span class="number">0</span>] = <span class="number">1</span>; f.v[<span class="number">0</span>][<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (;m;m&gt;&gt;=<span class="number">1</span>,f=f*f) <span class="keyword">if</span> (m &amp;<span class="number">1</span>) ans = f * ans;</span><br><span class="line">    cout&lt;&lt;(ans.v[<span class="number">0</span>][<span class="number">0</span>] + ans.v[<span class="number">1</span>][<span class="number">0</span>]) % mo; </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>简单数论</category>
+      </categories>
+      <tags>
+        <tag>最大公约数</tag>
+        <tag>观察性质</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CNN卷积神经网络</title>
+    <url>/2023/07/02/CNN/</url>
+    <content><![CDATA[<h1>什么是CNN卷积神经网络？</h1>
+<p>卷积神经网络（Convolutional Neural Networks, CNN）这个概念的提出可以追溯到二十世纪80~90年代，但是有那么一段时间这个概念被“雪藏”了，因为当时的硬件和软件技术比较落后，而随着各种深度学习理论相继被提出以及数值计算设备的高速发展，卷积神经网络得到了快速发展。那究竟什么是卷积神经网络呢？以手写数字识别为例，整个识别的过程如下所示：</p>
+<p><img src="/images/blogimages/CNNimages/1.png" alt="picture error"><pr>图1手写数字识别过程</p>
+]]></content>
+      <categories>
+        <category>NLP</category>
+      </categories>
+      <tags>
+        <tag>CNN</tag>
+        <tag>机器学习</tag>
       </tags>
   </entry>
 </search>
